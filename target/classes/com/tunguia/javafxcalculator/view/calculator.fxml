@@ -6,110 +6,110 @@
 <?import javafx.scene.text.Font?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0"
-      prefWidth="312.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+      prefWidth="312.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tunguia.javafxcalculator.Controller">
     <TextField fx:id="screenTxtf" alignment="BOTTOM_RIGHT" layoutY="-1.0" prefHeight="95.0" prefWidth="312.0" text="0">
         <font>
             <Font size="41.0"/>
         </font>
     </TextField>
-    <Button fx:id="allClearBtn" layoutY="94.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="78.0" text="AC">
+    <Button fx:id="allClearBtn" layoutY="94.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="76.0" prefWidth="78.0" text="AC">
         <font>
             <Font size="26.0"/>
         </font>
     </Button>
-    <Button fx:id="percentBtn" layoutX="156.0" layoutY="94.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="78.0"
+    <Button fx:id="percentBtn" layoutX="156.0" layoutY="94.0" onAction="#handleButtonAction" mnemonicParsing="false" prefHeight="76.0" prefWidth="78.0"
             text="\%">
         <font>
             <Font size="35.0"/>
         </font>
     </Button>
-    <Button fx:id="sevenBtn" layoutY="170.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="78.0" text="7">
+    <Button fx:id="sevenBtn" layoutY="170.0" onAction="#handleButtonAction" mnemonicParsing="false" prefHeight="76.0" prefWidth="78.0" text="7">
         <font>
             <Font size="35.0"/>
         </font>
     </Button>
-    <Button fx:id="eightBtn" layoutX="78.0" layoutY="170.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="78.0"
+    <Button fx:id="eightBtn" layoutX="78.0" layoutY="170.0" onAction="#handleButtonAction" mnemonicParsing="false" prefHeight="76.0" prefWidth="78.0"
             text="8">
         <font>
             <Font size="35.0"/>
         </font>
     </Button>
-    <Button fx:id="nineBtn" layoutX="156.0" layoutY="170.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="78.0"
+    <Button fx:id="nineBtn" layoutX="156.0" layoutY="170.0" onAction="#handleButtonAction" mnemonicParsing="false" prefHeight="76.0" prefWidth="78.0"
             text="9">
         <font>
             <Font size="35.0"/>
         </font>
     </Button>
-    <Button fx:id="fourBtn" layoutY="246.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="78.0" text="4">
+    <Button fx:id="fourBtn" layoutY="246.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="76.0" prefWidth="78.0" text="4">
         <font>
             <Font size="35.0"/>
         </font>
     </Button>
-    <Button fx:id="fiveBtn" layoutX="78.0" layoutY="246.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="78.0"
+    <Button fx:id="fiveBtn" layoutX="78.0" layoutY="246.0" onAction="#handleButtonAction" mnemonicParsing="false" prefHeight="76.0" prefWidth="78.0"
             text="5">
         <font>
             <Font size="35.0"/>
         </font>
     </Button>
-    <Button fx:id="sixBtn" layoutX="156.0" layoutY="246.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="78.0"
+    <Button fx:id="sixBtn" layoutX="156.0" layoutY="246.0" onAction="#handleButtonAction" mnemonicParsing="false" prefHeight="76.0" prefWidth="78.0"
             text="6">
         <font>
             <Font size="35.0"/>
         </font>
     </Button>
-    <Button fx:id="oneBtn" layoutY="322.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="78.0" text="1">
+    <Button fx:id="oneBtn" layoutY="322.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="76.0" prefWidth="78.0" text="1">
         <font>
             <Font size="35.0"/>
         </font>
     </Button>
-    <Button fx:id="twoBtn" layoutX="78.0" layoutY="322.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="78.0"
+    <Button fx:id="twoBtn" layoutX="78.0" layoutY="322.0" onAction="#handleButtonAction" mnemonicParsing="false" prefHeight="76.0" prefWidth="78.0"
             text="2">
         <font>
             <Font size="35.0"/>
         </font>
     </Button>
-    <Button fx:id="threeBtn" layoutX="156.0" layoutY="322.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="78.0"
+    <Button fx:id="threeBtn" layoutX="156.0" layoutY="322.0" onAction="#handleButtonAction" mnemonicParsing="false" prefHeight="76.0" prefWidth="78.0"
             text="3">
         <font>
             <Font size="35.0"/>
         </font>
     </Button>
-    <Button fx:id="zeronBtn" layoutY="398.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="156.0" text="0">
+    <Button fx:id="zeroBtn" layoutY="398.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="76.0" prefWidth="156.0" text="0">
         <font>
             <Font size="35.0"/>
         </font>
     </Button>
-    <Button fx:id="pointBtn" layoutX="156.0" layoutY="398.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="78.0"
+    <Button fx:id="pointBtn" layoutX="156.0" layoutY="398.0" onAction="#handleButtonAction" mnemonicParsing="false" prefHeight="76.0" prefWidth="78.0"
             text=".">
         <font>
             <Font name="System Bold" size="26.0"/>
         </font>
     </Button>
-    <Button fx:id="deleteBtn" layoutX="78.0" layoutY="94.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="78.0"
+    <Button fx:id="deleteBtn" layoutX="78.0" layoutY="94.0" onAction="#handleButtonAction" mnemonicParsing="false" prefHeight="76.0" prefWidth="78.0"
             text="DEL">
         <font>
             <Font size="26.0"/>
         </font>
     </Button>
-    <Button fx:id="multiplyBtn" layoutX="234.0" layoutY="94.0" mnemonicParsing="false" prefHeight="76.0"
+    <Button fx:id="multiplyBtn" layoutX="234.0" layoutY="94.0" onAction="#handleButtonAction" mnemonicParsing="false" prefHeight="76.0"
             prefWidth="78.0" text="x">
         <font>
             <Font size="35.0"/>
         </font>
     </Button>
-    <Button fx:id="minusBtn" layoutX="234.0" layoutY="170.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="78.0"
+    <Button fx:id="minusBtn" layoutX="234.0" layoutY="170.0" onAction="#handleButtonAction" mnemonicParsing="false" prefHeight="76.0" prefWidth="78.0"
             text="-">
         <font>
             <Font size="35.0"/>
         </font>
     </Button>
-    <Button fx:id="plusBtn" layoutX="234.0" layoutY="246.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="78.0"
+    <Button fx:id="plusBtn" layoutX="234.0" layoutY="246.0" onAction="#handleButtonAction" mnemonicParsing="false" prefHeight="76.0" prefWidth="78.0"
             text="+">
         <font>
             <Font size="35.0"/>
         </font>
     </Button>
-    <Button fx:id="equalsBtn" layoutX="234.0" layoutY="321.0" mnemonicParsing="false" prefHeight="153.0"
+    <Button fx:id="equalsBtn" layoutX="234.0" layoutY="321.0" onAction="#equalButtonAction" mnemonicParsing="false" prefHeight="153.0"
             prefWidth="78.0" text="=">
         <font>
             <Font size="35.0"/>

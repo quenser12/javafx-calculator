@@ -5,7 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
-public class Controller {
+public class Controller{
 
     @FXML
     private TextField screenTxtf;
@@ -48,14 +48,65 @@ public class Controller {
 
     String screenText = "";
 
+    int a;
+    int b;
+    String operation;
 
+    public void equalButtonAction(Event event){
+        Operator operator = new Operator();
+        int result = operator.calculate(a, b, operation);
+        screenTxtf.setText(Integer.toString(result));
+    }
 
     public void handleButtonAction(Event event){
 
+
         if(event.getSource() == oneBtn){
             screenText += "1";
+            a = 1;
             screenTxtf.setText(screenText);
         }
+        if(event.getSource() == plusBtn){
+            screenText += "+";
+            operation = "add";
+            screenTxtf.setText(screenText);
+        }
+        if(event.getSource() == twoBtn){
+            screenText += "2";
+            b = 2;
+            screenTxtf.setText(screenText);
+        }
+        if(event.getSource() == threeBtn){
+            screenText += "3";
+            a = 3;
+            screenTxtf.setText(screenText);
+        }
+        if(event.getSource() == fourBtn){
+            screenText += "4";
+            b = 4;
+            screenTxtf.setText(screenText);
+        }
+        if(event.getSource() == fiveBtn){
+            screenText += "5";
+            screenTxtf.setText(screenText);
+        }
+        if(event.getSource() == sixBtn){
+            screenText += "6";
+            screenTxtf.setText(screenText);
+        }
+        if(event.getSource() == sevenBtn){
+            screenText += "7";
+            screenTxtf.setText(screenText);
+        }
+        if(event.getSource() == eightBtn){
+            screenText += "8";
+            screenTxtf.setText(screenText);
+        }
+        if(event.getSource() == nineBtn){
+            screenText += "9";
+            screenTxtf.setText(screenText);
+        }
+
         if(!screenText.isEmpty() && event.getSource() == deleteBtn){
             String newText = screenText.substring(0, screenText.length()-1);
             screenText = newText;
@@ -65,6 +116,18 @@ public class Controller {
                 screenTxtf.setText("0");
             }
         }
+        if(event.getSource() == allClearBtn){
+            screenText = "";
+            a = 0;
+            b = 0;
+            operation = "";
+            screenTxtf.setText("0");
+        }
     }
+
+
+
+
+
 
 }
