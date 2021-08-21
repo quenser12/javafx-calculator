@@ -1,12 +1,14 @@
 package com.tunguia.javafxcalculator;
 
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 
 public class Controller {
+
     @FXML
-    private Label welcomeText;
+    private TextField screenTxtf;
     @FXML
     private Button zeroBtn;
     @FXML
@@ -44,13 +46,25 @@ public class Controller {
     @FXML
     private Button pointBtn;
 
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
-    }
+    String screenText = "";
 
-    public void calculate(){
 
+
+    public void handleButtonAction(Event event){
+
+        if(event.getSource() == oneBtn){
+            screenText += "1";
+            screenTxtf.setText(screenText);
+        }
+        if(!screenText.isEmpty() && event.getSource() == deleteBtn){
+            String newText = screenText.substring(0, screenText.length()-1);
+            screenText = newText;
+            System.out.println(screenText);
+            screenTxtf.setText(screenText);
+            if (screenText.isEmpty()){
+                screenTxtf.setText("0");
+            }
+        }
     }
 
 }

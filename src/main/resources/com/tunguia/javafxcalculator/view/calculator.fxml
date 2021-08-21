@@ -6,7 +6,7 @@
 <?import javafx.scene.text.Font?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0"
-      prefWidth="312.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+      prefWidth="312.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tunguia.javafxcalculator.Controller">
     <TextField fx:id="screenTxtf" alignment="BOTTOM_RIGHT" layoutY="-1.0" prefHeight="95.0" prefWidth="312.0" text="0">
         <font>
             <Font size="41.0"/>
@@ -57,7 +57,7 @@
             <Font size="35.0"/>
         </font>
     </Button>
-    <Button fx:id="oneBtn" layoutY="322.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="78.0" text="1">
+    <Button fx:id="oneBtn" layoutY="322.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="76.0" prefWidth="78.0" text="1">
         <font>
             <Font size="35.0"/>
         </font>
@@ -74,7 +74,7 @@
             <Font size="35.0"/>
         </font>
     </Button>
-    <Button fx:id="zeronBtn" layoutY="398.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="156.0" text="0">
+    <Button fx:id="zeroBtn" layoutY="398.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="156.0" text="0">
         <font>
             <Font size="35.0"/>
         </font>
@@ -85,7 +85,7 @@
             <Font name="System Bold" size="26.0"/>
         </font>
     </Button>
-    <Button fx:id="deleteBtn" layoutX="78.0" layoutY="94.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="78.0"
+    <Button fx:id="deleteBtn" layoutX="78.0" layoutY="94.0" onAction="#handleButtonAction" mnemonicParsing="false" prefHeight="76.0" prefWidth="78.0"
             text="DEL">
         <font>
             <Font size="26.0"/>
